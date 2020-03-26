@@ -1,0 +1,43 @@
+main
+{
+    display: flex;
+    font-size: 14px;
+    font-family: 'Trebuchet MS';
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} 
+
+h1
+{
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p
+{
+    color: white;
+    background-color: black;
+    padding: 10pt;
+}
+
+.card
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50vh;
+    width: 30vw;
+    background-color: #ff9800;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+p.egungun span, p.me span
+{
+    color: #ff9800;
+}
+p.egungun{ text-align: left;}
+p.me{text-align: right;}
