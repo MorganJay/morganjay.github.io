@@ -1,0 +1,76 @@
+html
+{
+    box-sizing: border-box;
+}
+
+
+#header
+{
+    background-color: #66ccff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+body{
+    background-color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+h1, h2, h3
+{
+    margin: 0;
+}
+
+#container{
+    background-color: white;
+    margin-left: auto;
+    margin-right:  auto;
+    height: 600px;
+
+}
+
+#content
+{
+    padding: 10px;
+}
+
+#nav{ 
+    width: 180px; 
+    float: left;
+    padding: 10px;
+}
+#nav ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav .selected
+{
+    font-weight: bold;
+}
+
+
+#main
+{
+    width: 600px;
+    float: right;
+    text-align: justify;
+    padding: 10px;
+}
+
+#footer
+{
+    clear: both;
+    padding: 10px;
+    background-color:#999999;
+    color: white;
+    text-align: right;
+}
