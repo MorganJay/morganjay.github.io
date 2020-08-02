@@ -103,12 +103,6 @@ form .form-group input, .form-group select{
     font-weight: 400;
     border-color: rgb(226, 232, 240);
     border: none; 
-    /* display: block;
-    overflow: visible;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-color: rgb(226, 232, 240);
-    border-style: none; */
 }
 
 .form-group select{
