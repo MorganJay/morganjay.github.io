@@ -6,7 +6,7 @@
 
 h2
 {
-    color: rgb(76, 0, 255);
+    color: rgb(0, 38, 255);
     margin: 0;
 }
 
@@ -32,6 +32,7 @@ h2
 .input-fields:focus
 {
     outline: none;
+    box-shadow: 1px;
 }
 
 #button
@@ -39,7 +40,7 @@ h2
     background-color: rgb(76, 0, 255);
     color: white;
     border: none;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px ;
     width: 350px;
     cursor: pointer;
 }

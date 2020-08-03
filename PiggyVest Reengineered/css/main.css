@@ -105,6 +105,11 @@ form .form-group input, .form-group select{
     border: none; 
 }
 
+input:focus, select:focus
+{
+    outline: none;
+}
+
 .form-group select{
     -webkit-box-align: center;
     align-items: center;
@@ -147,4 +152,9 @@ p a{
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 4px;
+}
+
+a:hover
+{
+    color: crimson;
 }

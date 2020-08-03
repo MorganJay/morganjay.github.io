@@ -13,3 +13,14 @@
 //  }
 // alert(data)
 //  console.log(data);
+
+function name() {
+    console.log("Hello World");
+}
+
+const arr = [1, 2, 3, 4, 5];
+
+arr.forEach(item => {
+    console.log(item);
+});
+
