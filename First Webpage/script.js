@@ -15,12 +15,17 @@
 //  console.log(data);
 
 function name() {
-    console.log("Hello World");
+  console.log("Hello World");
 }
 
 const arr = [1, 2, 3, 4, 5];
 
-arr.forEach(item => {
-    console.log(item);
+arr.forEach((item) => {
+  console.log(item);
 });
 
+const Name = "gonss";
+
+var bike = 34;
+
+let i = 534;

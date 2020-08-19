@@ -1,0 +1,25 @@
+dt::after,
+dt {
+  content: ": ";
+  margin-bottom: 2px;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
+  margin-bottom: 0%;
+  text-align: center;
+}
+
+* {
+  outline: 1px solid red;
+  box-sizing: border-box;
+}
+
+dl {
+  margin: auto 8%;
+}
