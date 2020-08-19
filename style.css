@@ -1,8 +1,14 @@
 html
 {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+*
+{
+    margin: 0;
+    padding: 0;
+}
 
 #header
 {
@@ -13,9 +19,8 @@ html
 }
 
 body{
-    background-color: gray;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    min-height: 100vh;
 }
 
 a{
@@ -28,10 +33,13 @@ h1, h2, h3
     margin: 0;
 }
 
+footer
+{
+
+}
+
 #container{
     background-color: white;
-    margin-left: auto;
-    margin-right:  auto;
     height: 600px;
 }
 
@@ -76,21 +84,16 @@ h1, h2, h3
     text-align: right;
 }
 
+#main > p{
+    color: crimson;
+    margin: 2em 0;
+ }
+
 @media(max-width: 855px)
 {
-    html
-    {
-        overflow-x: hidden;
-    }
-
     #content
     {
       display: flex;
       flex-direction: column;
-    }
-
-    #main
-    {
-        
     }
 }
