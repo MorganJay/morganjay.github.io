@@ -68,13 +68,14 @@ h3 {
 #footer {
   clear: both;
   padding: 10px;
-  background-color: #999999;
+  background-color: black;
   color: white;
   text-align: right;
   position: fixed; 
   bottom: 0;
   z-index: 1;
   width: 100%;
+  font-weight: bold; 
 }
 
 #main > p {
