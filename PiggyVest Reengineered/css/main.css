@@ -148,10 +148,11 @@ p a{
     margin-top: 32px;
     font-weight: 400;
     line-height: 21px;
-    padding-bottom: 0.25rem;
+    /* padding-bottom: 0.25rem;
     padding-right: 20px;
     padding-left: 20px;
-    padding-top: 4px;
+    padding-top: 4px; */
+    padding: 4px 20px 0.25rem 20px;
 }
 
 a:hover

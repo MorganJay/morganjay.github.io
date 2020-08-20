@@ -1,99 +1,87 @@
-html
-{
-    box-sizing: border-box;
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
 }
 
-*
-{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#header
-{
-    background-color: #66ccff;
-    color: white;
-    text-align: center;
-    padding: 10px;
+#header {
+  background-color: #66ccff;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-a{
-    text-decoration: none;
-    color: red;
+a {
+  text-decoration: none;
+  color: red;
 }
 
-h1, h2, h3
-{
-    margin: 0;
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
-footer
-{
-
+#container {
+  background-color: white;
 }
 
-#container{
-    background-color: white;
-    height: 600px;
+#content {
+  padding: 10px;
 }
 
-#content
-{
-    padding: 10px;
+#nav {
+  max-width: 180px;
+  float: left;
+  padding: 10px;
 }
 
-#nav{ 
-    width: 180px; 
-    float: left;
-    padding: 10px;
+#nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-#nav ul
-{
-    list-style-type: none;
-    padding: 0;
+#nav .selected {
+  font-weight: bold;
 }
 
-#nav .selected
-{
-    font-weight: bold;
+#main {
+  max-width: 600px;
+  float: right;
+  text-align: justify;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-#main
-{
-    max-width: 600px;
-    float: right;
-    text-align: justify;
-    padding: 10px;
-    width: 100%;
-    margin: 0 auto;
+#footer {
+  clear: both;
+  padding: 10px;
+  background-color: #999999;
+  color: white;
+  text-align: right;
+  margin-top: 5vh;
 }
 
-#footer
-{
-    clear: both;
-    padding: 10px;
-    background-color:#999999;
-    color: white;
-    text-align: right;
+#main > p {
+  color: crimson;
+  margin: 2em 0;
 }
 
-#main > p{
-    color: crimson;
-    margin: 2em 0;
- }
-
-@media(max-width: 855px)
-{
-    #content
-    {
-      display: flex;
-      flex-direction: column;
-    }
+@media (max-width: 855px) {
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
 }
