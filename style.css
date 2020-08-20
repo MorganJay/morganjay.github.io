@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -71,7 +71,10 @@ h3 {
   background-color: #999999;
   color: white;
   text-align: right;
-  margin-top: 5vh;
+  position: fixed; 
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 #main > p {
@@ -81,7 +84,7 @@ h3 {
 
 @media (max-width: 855px) {
   #content {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
   }
 }
