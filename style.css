@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -44,7 +44,7 @@ h3 {
 #nav {
   max-width: 180px;
   float: left;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 #nav ul {
@@ -60,7 +60,7 @@ h3 {
   max-width: 600px;
   float: right;
   text-align: justify;
-  padding: 10px;
+  padding: 10px 20px;
   width: 100%;
   margin: 0 auto;
 }
@@ -71,7 +71,11 @@ h3 {
   background-color: #999999;
   color: white;
   text-align: right;
-  margin-top: 5vh;
+  position: fixed;
+  bottom: 0%;
+  z-index: 1;
+  width: 100%;
+  font-weight: bold;
 }
 
 #main > p {
@@ -80,8 +84,8 @@ h3 {
 }
 
 @media (max-width: 855px) {
-  #content {
+  /* body{
     display: flex;
     flex-direction: column;
-  }
+  } */
 }
