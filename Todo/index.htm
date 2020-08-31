@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="index.css" />
+    <title>Test</title>
+  </head>
+  <body>
+    <div class="screen-center">
+      <div class="container">
+        <div class="card">
+          <div class="card-header text-center text-uppercase text-underline">
+            <h2>Todo App</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <form class="form-inline" id="addTaskForm">
+                <input
+                  type="text"
+                  placeholder="Add new task..."
+                  id="addTaskInput"
+                  autocomplete="off"
+                />
+                <button class="btn">Add</button>
+              </form>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title text-center text-uppercase text-underline">
+              <h4>Todo List</h4>
+            </div>
+            <div class="card-text">
+              <table class="table table-hover">
+                <thead>
+                  <th>s/n</th>
+                  <th>Title</th>
+                  <th>Done</th>
+                  <th></th>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

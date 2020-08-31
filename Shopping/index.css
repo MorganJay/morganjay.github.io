@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#contactHelp {
+  position: fixed;
+  z-index: 1;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+  padding: 1rem;
+  border: thin solid inherit;
+  background-color: #4a41f0;
+  color: #fff;
+  cursor: pointer;
+}
+
+#contactHelp:hover {
+  color: #010101;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  background-color: transparent;
+  border: thin solid;
+  border-radius: 0.2rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+header {
+  background-color: #f4f4f4;
+  padding: 0.5rem 0;
+}
+
+.card {
+  border: thin solid #cfcfcf;
+  border-radius: 0.5rem;
+  margin: 2rem;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: thin solid inherit;
+  background-color: #cfcfcf;
+}
+
+.card-img-top {
+  height: 15rem;
+}
+
+.card-img-top img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-title {
+  padding: 0.5rem 0;
+}
+
+.card-text {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  padding: 1rem;
+  background-color: #cfcfcf;
+  border-top: thin solid inherit;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.add:hover,
+.buy:hover {
+  color: #343434;
+  background-color: #f4f4f4;
+}
+
+.table {
+  width: 100%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.table th {
+  border-bottom: thin solid;
+  text-transform: uppercase;
+}
+
+.table td {
+  border-bottom: thin solid #d4d4d4;
+}
+
+.table th,
+.table td {
+  padding: 0.3rem 0;
+  text-align: center;
+  margin: auto;
+}
+
+.table th:first-child {
+  width: 70%;
+}
+
+.table th:last-child {
+  width: 10%;
+}
+
+.table input {
+  width: 3rem;
+  outline: none;
+}
+
+td.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+span.item-name {
+  font-size: 0.9rem;
+}
+
+span.item-price {
+  font-size: 0.7rem;
+}
+
+span#total {
+  border-bottom: thin solid;
+  padding: 0.3rem;
+}
+
+.remove {
+  border: none;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  color: red;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Meida Queries */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 448px) {
+  .container {
+    width: 100%;
+  }
+
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .card-body {
+    padding: 0.5rem;
+  }
+}

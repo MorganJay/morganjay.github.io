@@ -1,0 +1,28 @@
+body
+{
+    background-size: contain;
+    background-image: url(Ejiro.JPEG);
+    font-size: large;
+    color: yellow;
+}
+
+a
+{
+    text-decoration: none;
+    color: yellow;
+}
+
+p
+{
+    font-size: 20px;
+}
+
+span
+{
+    font-size: 2em;
+}
+
+.fortyrem
+{
+   font-size: 40rem; 
+}

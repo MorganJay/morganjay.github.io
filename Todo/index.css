@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.screen-center {
+  height: 100%;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.card {
+  border-radius: 0.3rem;
+  border: thin solid #cfcfcf;
+}
+
+.card-header {
+  background-color: #cfcfcf;
+  border-bottom: thin solid inherit;
+  padding: 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+
+.card-body:last-child {
+  padding-bottom: 1.5rem;
+}
+
+.card-title {
+  padding: 0.5rem;
+}
+
+.card-text {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+}
+
+.form-inline {
+  display: flex;
+}
+
+.form-inline input {
+  flex-grow: 8;
+}
+
+.form-inline button {
+  flex-grow: 2;
+  font-weight: 600;
+}
+
+.btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.form-inline input,
+.form-inline button {
+  background-color: #cfcfcf;
+  padding: 0.3rem 1rem;
+  outline: none;
+  border: none;
+}
+
+.table {
+  width: 100%;
+}
+
+.table thead {
+  background-color: #cfcfcf;
+}
+
+.table th {
+  text-transform: uppercase;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #cfcfcf;
+  padding: 0.3rem;
+}
+
+.table-hover tbody > tr:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.table tbody td:nth-child(3),
+.table tbody td:last-child {
+  text-align: center;
+}
+
+.delete {
+  color: red;
+  font-size: 1.3rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 568px) {
+  .container {
+    width: 100%;
+  }
+}
