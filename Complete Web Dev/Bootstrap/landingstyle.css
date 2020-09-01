@@ -44,12 +44,6 @@ header.startup hr {
   {
     padding: 1rem 2rem; 
   }
-  
-  .btn-primary 
-  {
-   
-  
-}
 
   .btn-primary:hover {
     border-width: 5px;
