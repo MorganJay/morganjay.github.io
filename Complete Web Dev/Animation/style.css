@@ -7,31 +7,29 @@
  * Copyright (c) 2020 Animate.css
  */
 
- /* Media Queries */
- @media(max-width: 370px)
- {
-   h1
-   {
-      font-size: 27px;
-   }
-   
-   .welcome
-   {
-     font-size: 23px;
-   }
- }
+/* Media Queries */
+@media (max-width: 370px) {
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 4rem);
+  }
 
- @media(min-width: 371px)
- {
-    h1
-    {
-      font-size: clamp(2rem, 5vw, 5rem)
-    }
- }
+  .welcome {
+    font-size: clamp(17px, 5vw, 21px);
+  }
+}
 
+@media (min-width: 371px) {
+  h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+  }
 
-body,html
-{
+  .welcome {
+    font-size: clamp(27px, 5vw, 40px);
+  }
+}
+
+body,
+html {
   height: 100%;
   width: 100%;
   color: white;
@@ -48,9 +46,8 @@ body {
   overflow: hidden;
 }
 
-hr
-{
-  border-color: rgba(255,255,255,0.1);
+hr {
+  border-color: rgba(255, 255, 255, 0.1);
   border-width: 2px;
 }
 
@@ -59,23 +56,15 @@ hr
   transition: all 2s;
 } */
 
-.welcome
-{
-  font-size: 27px;
-}
-
-.link
-{
+.link {
   font-weight: 900;
 }
 
-.link:hover
-{
-   color: rgb(2, 0, 36);
+.link:hover {
+  color: rgb(2, 0, 36);
 }
 
-footer
-{
+footer {
   font-size: 1em;
   bottom: 0;
   margin: 20px 5px auto 5px;
