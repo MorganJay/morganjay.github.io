@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
     <title>JavaScript + DOM</title>
 </head>
+
 <body>
-    <h1>Shopping List</h1>
-    <p id="first"> Get it done today</p> 
-    <input type="text" placeholder="Enter Items" id="userinput">
-    <button id="enter">Enter</button>
-    <ul>
-        <li class="bold red" random="23">Notebook</li>
-        <li>Pen</li>
-        <li>Earphones</li>
-        <li>Soup</li>
-        <li>Candles</li>
-        <li>Laptop</li>
-    </ul>
+    <header>
+        <div>
+            <h1 class="underlinePost">Shopping List</h1>
+            <p id="first"> <strong>Get it done today!!</strong> </p>
+            <div class="input">
+            <input type="text" placeholder="Enter Items..." id="userinput">
+            <button id="enter">Enter</button>
+            </div>           
+        </div>
+    </header>
+
+    <main>
+        <div class="main">
+            <ul id="list">
+                <li> Notebook <button class="delete">&times;</button> </li>
+                <li>Pen <button class="delete">&times;</button></li>
+                <li>Earphones <button class="delete">&times;</button></li>
+                <li>Soup <button class="delete">&times;</button></li>
+                <li>Candles <button class="delete">&times;</button></li>
+                <li>Laptop <button class="delete">&times;</button></li>
+            </ul>
+        </div>       
+    </main>
+
+    <footer>
+
+    </footer>
+
     <script text="text/javascript" src="script.js"></script>
 </body>
+
 </html>

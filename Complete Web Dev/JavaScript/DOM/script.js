@@ -47,9 +47,11 @@
 //      console.log("mouse has been left");
 //  })
 
-var button = document.getElementById("enter");
+var listbutton = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var delButton = document.getElementsByTagName("button");
+var li = document.querySelectorAll("li");
 
 function inputLength() {
   return input.value.length;
@@ -57,7 +59,14 @@ function inputLength() {
 
 function createListElement() {
   var li = document.createElement("li");
+  li.classList.add("listItem");
   li.appendChild(document.createTextNode(input.value));
+  var button = document.createElement("button");
+  button.innerText = "X";
+  button.classList.add("delete");
+  console.log("button created");
+  li.appendChild(button);
+  console.log(li);
   ul.appendChild(li);
   input.value = "";
 }
@@ -66,6 +75,7 @@ function addListAfterCLick() {
   if (inputLength() > 0) {
     createListElement();
   }
+  else{ console.log("enter an item pls");}
 }
 
 function addListAfterKeypress(event) {
@@ -74,6 +84,15 @@ function addListAfterKeypress(event) {
   }
 }
 
-button.addEventListener("click", addListAfterCLick());
+function listItemisDone() { 
+   li.classList.toggle("done");
+}
 
-input.addEventListener("keypress", addListAfterKeypress());
+
+listbutton.addEventListener("click", addListAfterCLick);
+input.addEventListener("keypress", addListAfterKeypress);
+
+//
+li.forEach((li) =>
+  li.addEventListener("click", listItemisDone));
+
