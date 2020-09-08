@@ -152,7 +152,7 @@ ol li.done::before {
 .done 
 {
   text-decoration: line-through;
-  background: #242323 !important;
+  background: #464545 !important;
   color: white;
 }
 
