@@ -1,56 +1,7 @@
-// //change all the HTML elements in the page
-// //change all the HTML attributes in the page
-// //change all the CSS styles in the page
-// //remove existing HTML elements and attributes
-// //add new HTML elements and attributes
-// //JavaScript can react to all existing HTML events in the page
-// //JavaScript can create new HTML events in the page
-// DOM Selectors
-// --------------
-// getElementsByTagName
-// getElementsByClassName
-// getElementById
-
-// querySelector
-// querySelectorAll
-
-// getAttribute
-// setAttribute
-
-// ##Changing Styles
-// style.{property} //ok
-
-// className //best
-// classList //best
-
-// classList.add
-// classList.remove
-// classList.toggle
-
-// ##Bonus
-// innerHTML //DANGEROUS
-
-// parentElement
-// document.querySelectorAll("li")[1].parentElement;
-// children
-
-// ##It is important to CACHE selectors in variables
-//  var h1 = document.querySelector("h1");
-
-//  var button = document.getElementsByTagName("button")[0];
-
-//  button.addEventListener("click", function(){
-//      console.log("CLICKK");
-//  });
-
-//  button.addEventListener("mouseleave", function(){
-//      console.log("mouse has been left");
-//  })
-
 var listbutton = document.getElementById("enter");
 var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
-var delButton = document.getElementsByTagName("button");
+var ol = document.querySelector("ol");
+var delButton = document.getElementsByClassName("delete");
 var li = document.querySelectorAll("li");
 
 function inputLength() {
@@ -59,23 +10,23 @@ function inputLength() {
 
 function createListElement() {
   var li = document.createElement("li");
-  li.classList.add("listItem");
   li.appendChild(document.createTextNode(input.value));
   var button = document.createElement("button");
-  button.innerText = "X";
+  button.innerText = "×";
   button.classList.add("delete");
-  console.log("button created");
   li.appendChild(button);
   console.log(li);
-  ul.appendChild(li);
+  ol.appendChild(li);
   input.value = "";
 }
 
 function addListAfterCLick() {
   if (inputLength() > 0) {
     createListElement();
+  } 
+  else {
+    alert("enter an item pls");
   }
-  else{ console.log("enter an item pls");}
 }
 
 function addListAfterKeypress(event) {
@@ -84,15 +35,20 @@ function addListAfterKeypress(event) {
   }
 }
 
-function listItemisDone() { 
-   li.classList.toggle("done");
-}
+// function listItemisDone() {
+//   li.classList.toggle("done");
+// }
 
+ function deleteListitem() {
+   for (var i = 0; i < delButton.length;  i++) {
+     delButton[i].addEventListener("click", function(e)
+     {
+        e.target.parentElement.parentElement.remove();
+     });
+   }
+ }
 
 listbutton.addEventListener("click", addListAfterCLick);
 input.addEventListener("keypress", addListAfterKeypress);
 
-//
-li.forEach((li) =>
-  li.addEventListener("click", listItemisDone));
-
+//li.forEach((li) => li.addEventListener("click", listItemisDone));

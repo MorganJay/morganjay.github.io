@@ -94,12 +94,12 @@ h1:hover {
   color: #222b40;
 }
 
-ul {
+ol {
   margin: 0;
   padding: 0;
 }
 
-ul li {
+ol li {
   position: relative;
   background-color: #cecece;
   list-style-type: none;
@@ -113,15 +113,15 @@ ul li {
   user-select: none;
 }
 
-ul li:nth-child(odd) {
+ol li:nth-child(odd) {
   background-color: #f6f9f3;
 }
 
-ul li:hover {
+ol li:hover {
   background-color: #ddd;
 }
 
-ul li.checked::before {
+ol li.checked::before {
   content: "";
   position: absolute;
   border-color: white;
