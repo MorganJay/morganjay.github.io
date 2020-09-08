@@ -23,10 +23,11 @@ header::after {
 }
 
 h1 {
-  /* justify-content: center;
-  display: inline-flex; */
+  
+  display: inline-block;
   margin-bottom: 15px;
   text-transform: uppercase;
+  width: 330px;
 }
 
 .underlinePost {
@@ -63,11 +64,16 @@ h1:hover {
 }
 
 #userinput {
-  width: 90%;
+  width: 85%;
   padding: 10px;
   font-size: 15px;
   border: none;
   border-radius: 0%;
+}
+
+#userinput:focus
+{
+  outline: none;
 }
 
 .input {
@@ -87,25 +93,33 @@ h1:hover {
   -ms-transition: 0.4s;
   border: none;
   background-color: #cecece;
+  width: 15%;
 }
 
 #enter:hover {
-  background-color: #b4b4b4;
+  background-color: #7a7979;
   color: #222b40;
 }
 
-ol {
+#enter:focus
+{
+  outline: none;
+}
+
+ol 
+{
   margin: 0;
   padding: 0;
 }
 
-ol li {
+ol li 
+{
   position: relative;
   background-color: #cecece;
-  list-style-type: none;
   cursor: pointer;
   padding: 10px 6px 10px 30px;
   transition: 0.3s;
+
   /* making list unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -121,21 +135,25 @@ ol li:hover {
   background-color: #ddd;
 }
 
-ol li.checked::before {
+ol li.done::before {
+  /* &check;  for checked symbol*/
   content: "";
   position: absolute;
   border-color: white;
   border-style: solid;
-  border-width: 0 2px;
-  top: 10px;
-  left: 15px;
-  height: 15px;
-  width: 10px;
-  transform: rotate(45deg);
+  border-width: 0 2px 2px 0;
+    top: 12px;
+    left: 12px;
+    height: 15px;
+    width: 10px;
+    transform: rotate(45deg);
 }
-
-.done {
+ 
+.done 
+{
   text-decoration: line-through;
+  background: #242323 !important;
+  color: white;
 }
 
 .delete {
@@ -148,7 +166,7 @@ ol li.checked::before {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 10px 15px;
+  padding: 8px 15px;
   font-size: large;
 }
 
@@ -156,4 +174,15 @@ ol li.checked::before {
   /* background-color: red; */
   background-color: #f43c2f;
   color: white;
+}
+
+.delete:focus
+{
+  outline: none;
+}
+
+p
+{
+  margin: 0;
+  padding: 0;
 }
