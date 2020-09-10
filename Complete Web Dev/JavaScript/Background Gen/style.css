@@ -1,0 +1,64 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+	font: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 1rem;
+    background: linear-gradient(to right, red , yellow); 
+    overflow-x: hidden;
+    /* Standard syntax */
+}
+
+.wrapper
+{
+    padding: 5rem;
+}
+
+h1 {
+    font: 600 3.5em 'Raleway', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+h2
+{
+    margin-top: 1rem;
+    letter-spacing: .3rem;
+}
+
+h3 {
+    font: 700 1.2em 'Raleway';
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+.btn
+{
+    margin: 1em;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,1);
+    font-size: 1rem;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
