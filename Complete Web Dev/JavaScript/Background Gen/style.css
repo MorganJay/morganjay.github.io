@@ -55,16 +55,16 @@ h3 {
 
 @media screen and (max-width: 550px) {
   h1 {
-    font-size: clamp(1rem, 7vw, 1.5rem);
+    font-size: clamp(1rem, 7vw, 2rem);
   }
 
   h2 
   {
-    font-size: clamp(0.8rem, 5vw, 1rem);
+    font-size: clamp(0.9rem, 4vw, 1.8rem);
   }
 
   h3 {
-    font-size: clamp(0.8rem, 3vw, 2rem);
+    font-size: clamp(0.8rem, 3vw, 1.5rem);
   }
 }
 
