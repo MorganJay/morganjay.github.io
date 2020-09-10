@@ -187,6 +187,8 @@ p
   padding: 0;
 }
 
-footer{
+footer
+{
   clear: both;
+  bottom: 0%;
 }
