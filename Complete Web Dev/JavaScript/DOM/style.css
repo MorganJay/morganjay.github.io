@@ -201,5 +201,9 @@ footer
   position: absolute;
   width: 100%;
   bottom: 0;
-  height: 24px;
+}
+
+#userinput:focus ~ footer 
+{
+  display: none
 }
