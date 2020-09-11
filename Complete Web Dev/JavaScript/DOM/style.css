@@ -14,6 +14,10 @@ header {
   color: white;
   text-align: center;
   padding: 30px 30px;
+-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 header::after {
