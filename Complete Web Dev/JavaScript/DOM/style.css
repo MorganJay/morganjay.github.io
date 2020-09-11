@@ -207,6 +207,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 7vh;
 }
 
 /*#userinput:focus ~ footer 
