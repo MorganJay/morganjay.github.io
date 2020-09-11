@@ -27,11 +27,14 @@ header::after {
 }
 
 h1 {
-  
   display: inline-block;
   margin-bottom: 15px;
   text-transform: uppercase;
   width: 330px;
+-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .underlinePost {
@@ -206,6 +209,10 @@ footer
   background-color: #222b40;
   color: white;
   padding: 1rem 0;
+-webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /*#userinput:focus ~ footer 
