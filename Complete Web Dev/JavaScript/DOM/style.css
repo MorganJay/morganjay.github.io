@@ -109,7 +109,7 @@ h1:hover {
 main
 {
   /*position: relative;*/
-  min-height: 100%;
+  min-height: 62vh;
   /* margin-bottom: -24px; */
   padding-bottom: 24px;
 }
@@ -201,6 +201,7 @@ footer
   bottom: 0;
   background-color: #222b40;
   color: white;
+  padding: 1rem 0;
 }
 
 /*#userinput:focus ~ footer 
