@@ -207,10 +207,4 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10vh;
 }
-
-/*#userinput:focus ~ footer 
-{
-  display: none
-}*/
