@@ -2,10 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
 }
 
-html, body 
+body 
 {
   min-width: 250px;
   height: 100vh;
@@ -32,6 +31,7 @@ h1 {
   display: inline-block;
   margin-bottom: 15px;
   text-transform: uppercase;
+
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -100,7 +100,7 @@ h1:hover {
   -ms-transition: 0.4s;
   border: none;
   background-color: #cecece;
-  width: 15%;
+  min-width: 15%;
 }
 
 #enter:hover {
@@ -114,9 +114,8 @@ h1:hover {
 
 main 
 {
-  min-height: 60vh;
+  min-height: 62vh;
   padding-bottom: 24px;
-  margin-bottom: 2%;
 }
 
 ol {
@@ -199,8 +198,7 @@ footer {
   bottom: 0;
   background-color: #222b40;
   color: white;
-  padding: 2% 0 1%;
-  height: 7vh;
+  padding: .5rem 0 .4rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
