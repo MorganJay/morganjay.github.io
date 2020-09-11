@@ -10,7 +10,6 @@ body {
 }
 
 header {
-  /* background-color: #f43c2f; */
   background-color: #222b40;
   color: white;
   text-align: center;
@@ -204,7 +203,7 @@ footer
   color: white;
 }
 
-#userinput:focus ~ footer 
+/*#userinput:focus ~ footer 
 {
   display: none
-}
+}*/
