@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red; 
+  /* outline: 1px solid red; */
 }
 
-body {
+html, body 
+{
   min-width: 250px;
   height: 100vh;
 }
@@ -15,7 +16,7 @@ header {
   color: white;
   text-align: center;
   padding: 30px 30px;
--webkit-user-select: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -31,8 +32,7 @@ h1 {
   display: inline-block;
   margin-bottom: 15px;
   text-transform: uppercase;
-  width: 330px;
--webkit-user-select: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -79,8 +79,7 @@ h1:hover {
   border-radius: 0%;
 }
 
-#userinput:focus
-{
+#userinput:focus {
   outline: none;
 }
 
@@ -109,27 +108,23 @@ h1:hover {
   color: #222b40;
 }
 
-#enter:focus
-{
+#enter:focus {
   outline: none;
 }
 
-main
+main 
 {
-  /*position: relative;*/
-  min-height: 62vh;
-  /* margin-bottom: -24px; */
+  min-height: 60vh;
   padding-bottom: 24px;
+  margin-bottom: 2%;
 }
 
-ol 
-{
+ol {
   margin: 0;
   padding: 0;
 }
 
-ol li 
-{
+ol li {
   position: relative;
   background-color: #cecece;
   cursor: pointer;
@@ -158,15 +153,14 @@ ol li.done::before {
   border-color: white;
   border-style: solid;
   border-width: 0 2px 2px 0;
-    top: 12px;
-    left: 12px;
-    height: 15px;
-    width: 10px;
-    transform: rotate(45deg);
+  top: 12px;
+  left: 12px;
+  height: 15px;
+  width: 10px;
+  transform: rotate(45deg);
 }
- 
-.done 
-{
+
+.done {
   text-decoration: line-through;
   background: #464545 !important;
   color: white;
@@ -187,33 +181,33 @@ ol li.done::before {
 }
 
 .delete:hover {
-  /* background-color: red; */
   background-color: #f43c2f;
   color: white;
 }
 
-.delete:focus
-{
+.delete:focus {
   outline: none;
 }
 
-p
-{
+p {
   margin: 0;
   padding: 0;
 }
 
-footer
-{
+footer {
   width: 100%;
   bottom: 0;
   background-color: #222b40;
   color: white;
-  padding: 1rem 0;
--webkit-user-select: none;
+  padding: 2% 0 1%;
+  height: 7vh;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*#userinput:focus ~ footer 
