@@ -6,6 +6,7 @@
 
 body {
   min-width: 250px;
+  height: 100%;
 }
 
 header {
@@ -106,6 +107,14 @@ h1:hover {
   outline: none;
 }
 
+main
+{
+  position: relative;
+  min-height: 100%;
+  /* margin-bottom: -24px; */
+  padding-bottom: 24px;
+}
+
 ol 
 {
   margin: 0;
@@ -189,6 +198,8 @@ p
 
 footer
 {
-  clear: both;
-  bottom: 0%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 24px;
 }
