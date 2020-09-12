@@ -41,8 +41,7 @@ function winBattle(bool) {
 }
 var experiencePoints = winBattle(true) ? "10" : "1";
 
-function calculator(operation) {
-  let a, b;
+function calculator(a, operation , b) {
   switch (operation) {
     case "+":
       return a + b;
