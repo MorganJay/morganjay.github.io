@@ -39,17 +39,24 @@ function moveCommand(direction) {
 function winBattle(bool) {
   return bool;
 }
-var experiencePoints = winBattle(true) ? "10" : "1";
+var experiencePoints = winBattle(true) ? 10 : 1;
 
-function calculator(a, operation , b) {
+function calculator() {
+  a = prompt("enter a number");
+  b = prompt("enter the second number");
+  operation = prompt("operation?");
   switch (operation) {
     case "+":
+      alert(a + b);
       return a + b;
     case "-":
+      alert(a - b);
       return a - b;
     case "/":
+      alert(a / b);
       return a / b;
     case "*":
+      alert(a * b);
       return a * b;
     default: 
     return "Invalid operation";

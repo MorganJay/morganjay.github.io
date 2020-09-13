@@ -20,6 +20,9 @@ header {
   -ms-user-select: none;
   user-select: none;
   position: sticky; 
+  z-index: 1;
+  top: 0;
+  min-height: 31.7vh;
 }
 
 header::after {
@@ -109,7 +112,8 @@ h1:hover {
   color: #222b40;
 }
 
-#enter:focus {
+#enter:focus 
+{
   outline: none;
 }
 
@@ -159,7 +163,8 @@ ol li.done::before {
   transform: rotate(45deg);
 }
 
-.done {
+.done 
+{
   text-decoration: line-through;
   background: #464545 !important;
   color: white;
