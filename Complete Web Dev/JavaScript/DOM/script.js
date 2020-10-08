@@ -1,4 +1,4 @@
-//caheing selectors
+//cacheing selectors
 var addbutton = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ol = document.querySelector("ol");
