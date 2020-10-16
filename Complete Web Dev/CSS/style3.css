@@ -1,0 +1,65 @@
+
+body
+{
+    background-color: #2a4f6e;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+p
+{
+    border: 5px solid rgb(106, 135, 160);
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+img
+{
+    float: left;
+}
+
+.form-inline
+{
+    display: flex;
+}
+
+.form-inline input, .form-inline button {
+    background-color: #89BFD7;
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: none;
+}
+
+.form-inline input {
+    flex-grow: 8;
+}
+
+.form-inline button
+{
+    flex-grow: 2;
+}
+
+p
+{
+    padding: 1rem;
+    text-align: right;
+    line-height: 50px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+footer
+{
+    clear: both;
+    text-align: center;
+}
