@@ -273,7 +273,7 @@ const wizard1 = new Wizard('Shelly', "Healer");
 const wizard2 = new Wizard("Brian","Dark Magic");
 
 
-//#3 create two classes: an Animal class and a Mamal class. 
+//#3 create two classes: an Animal class and a Mammal class. 
 class Animal
 {
     constructor(name, type, color)

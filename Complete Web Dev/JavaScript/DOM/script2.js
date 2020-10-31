@@ -30,7 +30,7 @@ function crossItem(e)
 }
 
 function delItem(e) {
-    const listitem = e.currentTarget.parentElement.parentElement;
+    const listitem = e.currentTarget.parentElement. parentElement;
     ol.removeChild(listitem);
 }
 
@@ -56,5 +56,3 @@ li.forEach((list_item) => {
 delButton.forEach((delBtn) => {
   delBtn.addEventListener("click", delItem);
 });
-
-
