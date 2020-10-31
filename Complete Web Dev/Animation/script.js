@@ -12,7 +12,7 @@ paragraph.addEventListener("animationend", () => {
 });
 
 function displayMonth() {
-  const date = new Date(2020, 10, 16);
+  const date = new Date();
   const month = new Intl.DateTimeFormat("en", { month: "long" }).format(date);
   paragraph.innerHTML = `Welcome to ${month} <br> God bless you!!`;
 }
