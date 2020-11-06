@@ -8,34 +8,31 @@ body
 {
   min-width: 250px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   background-color: #222b40;
   color: white;
-  text-align: center;
-  padding: 30px 30px;
+  padding: 20px 30px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   position: sticky; 
-  z-index: 1;
+  z-index: 99;
   top: 0;
-  min-height: 31.7vh;
 }
 
-header::after {
-  content: "";
-  display: table;
-  clear: both;
+.date{
+  text-align: left;
 }
 
 h1 {
   display: inline-block;
   margin-bottom: 15px;
   text-transform: uppercase;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -58,21 +55,25 @@ h1:hover {
   background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
 }
 
+.search-wrapper{
+  float: right;
+  margin-top: 40px;
+}
+
+.search{
+  padding: 10px;
+  display: block;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.tasks{
+  margin-top: 1em;
+}
+
 #first {
   margin-bottom: 15px;
-}
-.coolTitle {
-  text-align: center;
-  font-family: "Oswald", Helvetica, sans-serif;
-  font-size: 80px;
-  transform: skewY(-10deg);
-  letter-spacing: 4px;
-  word-spacing: -8px;
-  color: tomato;
-  text-shadow: -1px -1px 0 firebrick, -2px -2px 0 firebrick,
-    -3px -3px 0 firebrick, -4px -4px 0 firebrick, -5px -5px 0 firebrick,
-    -6px -6px 0 firebrick, -7px -7px 0 firebrick, -8px -8px 0 firebrick,
-    -30px 20px 40px dimgrey;
 }
 
 #userinput {
@@ -93,7 +94,6 @@ h1:hover {
 }
 
 #enter {
-  padding: 10px;
   color: #222b40;
   text-align: center;
   border-radius: 0;
@@ -119,12 +119,17 @@ h1:hover {
 
 main 
 {
-  min-height: 62.5vh;
+  flex: 1;
 }
 
 ol {
   margin: 0;
   padding: 0;
+}
+
+.list-container{
+  display: inline-flex;
+  width: 100%;
 }
 
 ol li {
@@ -133,7 +138,7 @@ ol li {
   cursor: pointer;
   padding: 10px 6px 10px 30px;
   transition: 0.3s;
-
+  width: 100%;
   /* making list unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -142,7 +147,7 @@ ol li {
 }
 
 ol li:nth-child(odd) {
-  background-color: #f6f9f3;
+  background-color: white;
 }
 
 ol li:hover {
@@ -170,6 +175,12 @@ ol li.done::before {
   color: white;
 }
 
+.button-container{
+  background-color: #222b40;
+  align-self: flex-end;
+  height: 23px;
+}
+
 .delete {
   border: none;
   padding: 0.3rem;
@@ -177,9 +188,6 @@ ol li.done::before {
   background-color: transparent;
   border-radius: 0.2rem;
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 0;
   padding: 8px 15px;
   font-size: large;
 }
@@ -200,7 +208,6 @@ p {
 
 footer {
   width: 100%;
-  bottom: 0;
   background-color: #222b40;
   color: white;
   padding: .5rem 0 .4rem;
@@ -211,4 +218,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+a{
+  color:  #9aa0af;
 }
