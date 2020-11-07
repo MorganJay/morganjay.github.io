@@ -3,29 +3,28 @@ const addButton = document.getElementById("enter");
 const input = document.getElementById("userinput");
 const ol = document.querySelector("ol");
 const tasksNo = document.querySelector(".tasks");
-const searchInput = document.querySelector(".search")
+const searchInput = document.querySelector(".search");
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 const date = document.querySelector(".date");
-const doneTasks = JSON.parse(localStorage.getItem("donetodos"))||[];
+const doneTasks = JSON.parse(localStorage.getItem("donetodos")) || [];
 // import Swal from 'sweetalert2';
 // const Swal = require('sweetalert2');
 
 if (todos) {
   todos.forEach((todo) => {
-    if(doneTasks.includes(todo)){
+    if (doneTasks.includes(todo)) {
       ol.innerHTML += `
       <div class="list-container">
           <li class="done">${todo}</li>
           <button type="button" class="delete">×</button>
       </div>`;
-    }
-    else{
+    } else {
       ol.innerHTML += `
       <div class="list-container">
           <li>${todo}</li>
           <button type="button" class="delete">×</button>
       </div>`;
-    }           
+    }
   });
   numberTasks();
   const delButton = document.querySelectorAll(".delete");
@@ -68,7 +67,7 @@ function getDate() {
   const d = new Date();
   const dayName = days[d.getDay()];
   const monthName = monthNames[d.getMonth()];
-  const day = (d.getDay() + 1);
+  const day = d.getDay() + 1;
   const year = d.getFullYear();
   date.textContent = `${dayName} ${day} ${monthName}, ${year}`;
 }
@@ -120,8 +119,8 @@ function crossItem(e) {
     list_item.classList.add("done");
     doneTasks.push(listText);
     localStorage.setItem("donetodos", JSON.stringify(doneTasks));
-    Swal.fire('Good job!','Task completed','success');
-    document.querySelector('body').classList.add("fullheight");
+    Swal.fire("Good job!", "Task completed", "success");
+    document.querySelector("body").classList.add("fullheight");
   }
 }
 
@@ -139,7 +138,15 @@ function addListAfterCLick() {
   if (inputLength() > 0) {
     createListElement();
   } else {
-    alert("Please enter an item");
+    Swal.fire({
+      icon: 'error',
+      timerProgressBar: true,
+      showConfirmButton: false,
+      text: "Please enter a task to do",
+      toast: true,
+      position: 'top-end',
+      timer: 2000
+    });
   }
 }
 
@@ -149,18 +156,28 @@ function addListAfterKeypress(event) {
   }
 }
 
-function searchTodos(e){
+function searchTodos(e) {
   const input = e.target.value.toLowerCase();
-  Array.from(todos).forEach((todo) => {
-      if (todo.toLowerCase().indexOf(input) != -1) {
-        todo.style.display = "block";
-      } else {
-        todo.style.display = "none";
+  const list = ol.querySelectorAll(".list-container");
+  if (input != "") 
+  {
+   
+    Array.from(list).forEach((todo) => {
+      if (todo.textContent.toLowerCase().indexOf(input) === -1) {
+        todo.classList.add("hide");
+      } 
+      else{
+        todo.classList.remove("hide");
       }
-  });
+    });
+  }
+  else
+  {
+      list.forEach(list_container => list_container.classList.remove("hide"));
+  }
 }
 
 document.addEventListener("DOMContentLoaded", getDate);
 addButton.addEventListener("click", addListAfterCLick);
 input.addEventListener("keypress", addListAfterKeypress);
-searchInput.addEventListener('keyup', searchTodos);
+searchInput.addEventListener("keyup", searchTodos);

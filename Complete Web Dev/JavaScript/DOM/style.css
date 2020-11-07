@@ -36,7 +36,8 @@ header {
 }
 
 h1 {
-  font-size: clamp(2.5em, 7vw, 4em);
+  margin-top: 5px;
+  font-size: clamp(1.9em, 10vw, 2.7em);
   margin-bottom: 15px;
   text-transform: uppercase;
   -webkit-user-select: none;
@@ -74,7 +75,7 @@ h1:hover {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  width: 150px;
+  max-width: 200px;
   align-self: flex-end;
 }
 
@@ -153,6 +154,7 @@ ol li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-transform: capitalize;
 }
 
 ol li:nth-child(odd) {
@@ -181,6 +183,10 @@ ol li.done::before {
   text-decoration: line-through;
   background: #464545 !important;
   color: white;
+}
+
+.hide{
+  display: none;
 }
 
 .button-container {
@@ -237,7 +243,7 @@ a {
   height: 100vh!important;
 }
 
-@media(max-width: 400px){
+@media(max-width: 600px){
   .search-wrapper {
     display: flex;
     justify-content: space-between;
