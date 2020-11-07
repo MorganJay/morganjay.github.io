@@ -121,6 +121,7 @@ function crossItem(e) {
     doneTasks.push(listText);
     localStorage.setItem("donetodos", JSON.stringify(doneTasks));
     Swal.fire('Good job!','Task completed','success');
+    document.querySelector('body').classList.add("fullheight");
   }
 }
 
