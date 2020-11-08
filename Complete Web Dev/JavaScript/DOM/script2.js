@@ -38,7 +38,6 @@ if (todos) {
 }
 
 function getDate() {
-  // Get dates
   const days = [
     "Sunday",
     "Monday",
@@ -48,7 +47,6 @@ function getDate() {
     "Friday",
     "Saturday",
   ];
-
   const monthNames = [
     "January",
     "February",
@@ -63,7 +61,6 @@ function getDate() {
     "November",
     "December",
   ];
-
   const d = new Date();
   const dayName = days[d.getDay()];
   const monthName = monthNames[d.getMonth()];
