@@ -8,7 +8,6 @@ let todos = JSON.parse(localStorage.getItem("todos")) || [];
 const date = document.querySelector(".date");
 const doneTasks = JSON.parse(localStorage.getItem("donetodos")) || [];
 // import Swal from 'sweetalert2';
-// const Swal = require('sweetalert2');
 
 if (todos) {
   todos.forEach((todo) => {
@@ -64,7 +63,7 @@ function getDate() {
   const d = new Date();
   const dayName = days[d.getDay()];
   const monthName = monthNames[d.getMonth()];
-  const day = d.getDay() + 1;
+  const day = d.getDate();
   const year = d.getFullYear();
   date.textContent = `${dayName} ${day} ${monthName}, ${year}`;
 }
@@ -136,13 +135,13 @@ function addListAfterCLick() {
     createListElement();
   } else {
     Swal.fire({
-      icon: 'error',
+      icon: "error",
       timerProgressBar: true,
       showConfirmButton: false,
       text: "Please enter a task to do",
       toast: true,
-      position: 'top-end',
-      timer: 2000
+      position: "top-end",
+      timer: 2000,
     });
   }
 }
@@ -150,27 +149,33 @@ function addListAfterCLick() {
 function addListAfterKeypress(event) {
   if (inputLength() > 0 && event.keyCode === 13) {
     createListElement();
-  }
-}
+  } 
+//   else if (inputLength() < 1) {
+//     Swal.fire({
+//       icon: "error",
+//       timerProgressBar: true,
+//       showConfirmButton: false,
+//       text: "Please enter a task to do",
+//       toast: true,
+//       position: "top-end",
+//       timer: 2000,
+//     });
+//   }
+// }
 
 function searchTodos(e) {
   const input = e.target.value.toLowerCase();
   const list = ol.querySelectorAll(".list-container");
-  if (input != "") 
-  {
-   
+  if (input != "") {
     Array.from(list).forEach((todo) => {
       if (todo.textContent.toLowerCase().indexOf(input) === -1) {
         todo.classList.add("hide");
-      } 
-      else{
+      } else {
         todo.classList.remove("hide");
       }
     });
-  }
-  else
-  {
-      list.forEach(list_container => list_container.classList.remove("hide"));
+  } else {
+    list.forEach((list_container) => list_container.classList.remove("hide"));
   }
 }
 

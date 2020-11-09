@@ -117,6 +117,7 @@ h1:hover {
   border: none;
   background-color: #cecece;
   min-width: 15%;
+  height: 36px;
 }
 
 #enter:hover {
