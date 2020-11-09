@@ -186,7 +186,7 @@ ol li.done::before {
   color: white;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
@@ -241,18 +241,28 @@ a {
 }
 
 .fullheight {
-  height: 100vh!important;
+  height: 100vh !important;
 }
 
-@media(max-width: 600px){
+@media (max-width: 600px) {
   .search-wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     margin-bottom: 20px;
   }
-  
-  .search{
-    align-self: flex-start
+
+  .search {
+    align-self: flex-start;
+    font-size: 13px;
+  }
+
+  #userinput {
+    font-size: 13px;
+    width: 80%;
+  }
+
+  #enter {
+    min-width: 20%;
   }
 }
