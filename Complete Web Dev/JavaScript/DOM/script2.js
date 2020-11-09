@@ -147,21 +147,20 @@ function addListAfterCLick() {
 }
 
 function addListAfterKeypress(event) {
-  if (inputLength() > 0 && event.keyCode === 13) {
+  if (inputLength() === 0 && event.keyCode === 13) {
+    Swal.fire({
+      icon: "error",
+      timerProgressBar: true,
+      showConfirmButton: false,
+      text: "Please enter a task to do",
+      toast: true,
+      position: "top-end",
+      timer: 2000,
+    });
+  } else if (inputLength() > 0 && event.keyCode === 13) {
     createListElement();
-  } 
-//   else if (inputLength() < 1) {
-//     Swal.fire({
-//       icon: "error",
-//       timerProgressBar: true,
-//       showConfirmButton: false,
-//       text: "Please enter a task to do",
-//       toast: true,
-//       position: "top-end",
-//       timer: 2000,
-//     });
-//   }
-// }
+  }
+}
 
 function searchTodos(e) {
   const input = e.target.value.toLowerCase();
