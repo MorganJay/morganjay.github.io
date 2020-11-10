@@ -8,7 +8,7 @@ const searchInput = document.querySelector(".search");
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 const date = document.querySelector(".date");
 const doneTasks = JSON.parse(localStorage.getItem("donetodos")) || [];
-import Swal from "sweetalert";
+// import Swal from "sweetalert";
 
 if (todos) {
 	todos.forEach((todo) => {
@@ -109,6 +109,7 @@ function crossItem(e) {
 	let listText = list_item.textContent;
 	if (list_item.classList.contains("done")) {
 		list_item.classList.remove("done");
+		document.querySelector("body").classList.remove("fullheight");
 		let index = doneTasks.indexOf(listText);
 		doneTasks.splice(index, 1);
 		localStorage.setItem("donetodos", JSON.stringify(doneTasks));
@@ -117,7 +118,7 @@ function crossItem(e) {
 		doneTasks.push(listText);
 		localStorage.setItem("donetodos", JSON.stringify(doneTasks));
 		Swal.fire("Good job!", "Task completed", "success");
-		document.querySelector("body").classList.add("fullheight");
+		document.querySelector("body").classList.remove("swal2-height-auto");
 	}
 }
 
