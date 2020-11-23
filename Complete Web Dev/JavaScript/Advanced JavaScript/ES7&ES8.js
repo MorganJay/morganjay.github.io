@@ -12,18 +12,18 @@ const square = (x) => x ** 2;
 const cube = (y) => y ** 3;
 
 function fibo() {
-  var first, second, add;
-  for (var i = 0; i < 4000; i++) {
-    if (i === 0) {
-      first = 1;
-      second = 2;
-    }
-    add = first + second;
-    first = second;
-    second = add;
-  }
+	var first, second, add;
+	for (var i = 0; i < 4000; i++) {
+		if (i === 0) {
+			first = 1;
+			second = 2;
+		}
+		add = first + second;
+		first = second;
+		second = add;
+	}
 
-  alert(add);
+	alert(add);
 }
 fibo();
 
@@ -38,25 +38,25 @@ const fun = (a, b, c) => console.log(a);
 // Object.entries
 // Object.keys
 let obj = {
-  username0: "santa",
-  username1: "assa",
-  username2: "John",
+	username0: "santa",
+	username1: "assa",
+	username2: "John",
 };
 
 Object.keys(obj).forEach((key, index) => {
-  console.log(key, obj[key], index);
+	console.log(key, obj[key], index);
 });
 
 Object.values(obj).forEach((value) => {
-  console.log(value);
+	console.log(value);
 });
 
 Object.entries(obj).forEach((value) => {
-  console.log(value);
+	console.log(value);
 });
 
 Object.entries(obj).map((value) => {
-  return value[1] + value[0].replace("username", "");
+	return value[1] + value[0].replace("username", "");
 });
 
 // Solve the below problems:
@@ -91,24 +91,24 @@ turtle = turtle.trim().padEnd(9, "=");
 obj = "my name is Rudolf the reindeer";
 
 Object.entries(obj)
-  .map((value) => value[0] + " " + value[1])
-  .join(" ");
+	.map((value) => value[0] + " " + value[1])
+	.join(" ");
 
 Object.entries(obj)
-  .map((value) => value.join(" "))
-  .join(" ");
+	.map((value) => value.join(" "))
+	.join(" ");
 
 //Debugging
 
 const flattened = [
-  [0, 1],
-  [2, 3],
-  [4, 5],
+	[0, 1],
+	[2, 3],
+	[4, 5],
 ].reduce((accumulator, array) => {
-    console.log('array', array);
-    console.log('acc',  accumulator);
-    //debugger
-    return accumulator.concat(array);
+	console.log("array", array);
+	console.log("acc",  accumulator);
+	//debugger
+	return accumulator.concat(array);
 }, []);
 
 const flattenedo = [[0, 1],[2, 3],[4, 5]].reduce((accumulator, array) => accumulator.concat(array), []);
@@ -116,7 +116,7 @@ const flattenedo = [[0, 1],[2, 3],[4, 5]].reduce((accumulator, array) => accumul
 //Call Stack Overflow
 function foo()
 {
-  foo();
+	foo();
 }
 
 foo();

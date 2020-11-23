@@ -64,10 +64,10 @@ function calculator() {
 }
 
 //Destructuring
-// const obj = {
-//   players: "bobby", experience: 100,
-//   wizardLevel: false
-// };
+const obj = {
+  players: "bobby", experience: 100,
+  wizardLevel: false
+};
 
 // const players = obj.players;
 // const experience = obj.experience;
@@ -112,7 +112,8 @@ const add = (a, b) => a + b;
 const first = () => {
   const greet = "Hi";
   const second = () => {
-    alert(greet);
+    // alert("sds");
+    // alert(greet);
   };
   return second;
 };
@@ -206,11 +207,12 @@ const mapArrays = array.map((user) => `${user.username}?`);
 console.log("map function", mapArray);
 
 //Filter the array to only include users who are on team: red
-const filterArrays = array.filter((user) => user.team == "red");
+const filterArrays = arrayEx.filter(user => user.team == "red");
 console.log(filterArray);
 
 //Find out the total score of all users using reduce
-const userTotalScore = array.reduce((acc, user) => user.score + acc, 0);
+const userTotalScore = arrayEx.reduce((acc, user) => user.score + acc, 0);
+console.log(userTotalScore);
 
 // (1), what is the value of i?
 //index
@@ -225,8 +227,8 @@ const newArrayo = arrayNum.map((num, i) => num * 2);
 // });
 
 //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
-const answers = array.map(user=> {
-  user.items = user.items.map(item => item + "!");
+const answers = arrayEx.map((user) => {
+  user.items = user.items.map((item) => item + "!");
   return user;
 });
 
@@ -242,58 +244,52 @@ const Answer = array.map((user) => {
 
 var obj1 = { value: 10 };
 var obj2 = obj1;
-var object3 = { value: 10};
+var object3 = { value: 10 };
 
 class Player {
-  constructor(name, type)
-  {
+  constructor(name, type) {
     console.log(this);
     this.name = name;
     this.type = type;
   }
 
-  introduce()
-  {
+  introduce() {
     console.log(`Hi  I am ${this.name} of this ${this.type}`);
   }
 }
 
-class Wizard extends Player{
-  constructor(name, type)
-  {
-   super(name, type);
-   console.log('wizard', this);
+class Wizard extends Player {
+  constructor(name, type) {
+    super(name, type);
+    console.log("wizard", this);
   }
 
-  play()
-  { console.log(`WEEE I'm a ${this.type}`);}
+  play() {
+    console.log(`WEEE I'm a ${this.type}`);
+  }
 }
 
-const wizard1 = new Wizard('Shelly', "Healer");
-const wizard2 = new Wizard("Brian","Dark Magic");
+const wizard1 = new Wizard("Shelly", "Healer");
+const wizard2 = new Wizard("Brian", "Dark Magic");
 
-
-//#3 create two classes: an Animal class and a Mammal class. 
-class Animal
-{
-    constructor(name, type, color)
-    {
-        this.name = name;
-        this.type = type;
-        this.color = color;
-    }
+//#3 create two classes: an Animal class and a Mammal class.
+class Animal {
+  constructor(name, type, color) {
+    this.name = name;
+    this.type = type;
+    this.color = color;
+  }
 }
 
-class Mammal extends Animal
-{
-    constructor(name, type, color)
-    {
-        super(name, type, color)
-    }
-    sound()
-    {
-        console.log(`MOOOOOOO My name is ${this.name} and i am a ${this.type} look at my ${this.color} fur`);
-    }
+class Mammal extends Animal {
+  constructor(name, type, color) {
+    super(name, type, color);
+  }
+  sound() {
+    console.log(
+      `MOOOOOOO My name is ${this.name} and i am a ${this.type} look at my ${this.color} fur`
+    );
+  }
 }
-// create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
-const cow = new Mammal('Gene', 'cow', 'red')
+// create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color.
+const cow = new Mammal("Gene", "cow", "red");
