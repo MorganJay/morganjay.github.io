@@ -36,14 +36,10 @@ const fun = (a, b, c) => console.log(a);
 // Object.values
 // Object.entries
 // Object.keys
-const obj = {
-  username0: "santa",
-  username1: "assa",
-  username2: "john",
-};
-// Object.keys(obj).forEach((key, index) => {
+
 //   console.log(key, obj[key], index);
 // });
+// Object.keys(obj).forEach((key, index) => {
 
 // Object.values(obj).forEach((value) => {
 //   console.log(value);
@@ -58,31 +54,23 @@ const obj = {
 // });
 
 //sort an object
+const obj = {
+  username0: "santa",
+  username1: "assa",
+  username2: "john",
+};
 const sortedObj = Object.values(obj)
   .sort()
-//.reduce((result, item) => {
-//     result[key] = item;
-//     result[getKeyByValue(item, obj)] = item;
-//      return result;
-//   }, {});
-  .forEach((value) => {
-   obj[getKeyByValue(obj, value)] = value;
-  });
-//   .reduce(
-//     (result, value) => ({
-//       ...result,
-//       [value]: value,
-//     }),
-//     {}
-//   )
-//   .reduce((result, key) => ((obj[key] = result[key]), result), {});
+.reduce((result, item) => {
+    result[getKeyByValue(obj, item)] = item;
+     return result;
+  }, {});
 
 function getKeyByValue(object, value) {
   return Object.keys(object).find((key) => object[key] === value);
 }
 
 console.log(getKeyByValue(obj, "santa"));
-
 console.log(sortedObj);
 
 let obj2 = {

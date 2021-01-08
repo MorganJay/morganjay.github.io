@@ -62,12 +62,13 @@ function calculator() {
       return "Invalid operation";
   }
 }
+const once = {
+  once: true,
+};
 
 document
   .querySelector("button")
-  .addEventListener("click", () => console.log("i only run once"), {
-    once: true,
-  });
+  .addEventListener("click", () => console.log("I only run once"), once);
 
 //Destructuring
 // const obj = {
