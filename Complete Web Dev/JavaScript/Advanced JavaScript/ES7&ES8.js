@@ -12,18 +12,17 @@ const square = (x) => x ** 2;
 const cube = (y) => y ** 3;
 
 function fibo() {
-	var first, second, add;
-	for (var i = 0; i < 4000; i++) {
-		if (i === 0) {
-			first = 1;
-			second = 2;
-		}
-		add = first + second;
-		first = second;
-		second = add;
-	}
-
-	alert(add);
+  var first, second, add;
+  for (var i = 0; i < 4000; i++) {
+    if (i === 0) {
+      first = 1;
+      second = 2;
+    }
+    add = first + second;
+    first = second;
+    second = add;
+  }
+  alert(add);
 }
 fibo();
 
@@ -37,27 +36,84 @@ const fun = (a, b, c) => console.log(a);
 // Object.values
 // Object.entries
 // Object.keys
-let obj = {
-	username0: "santa",
-	username1: "assa",
-	username2: "John",
+const obj = {
+  username0: "santa",
+  username1: "assa",
+  username2: "john",
 };
+// Object.keys(obj).forEach((key, index) => {
+//   console.log(key, obj[key], index);
+// });
 
-Object.keys(obj).forEach((key, index) => {
-	console.log(key, obj[key], index);
-});
+// Object.values(obj).forEach((value) => {
+//   console.log(value);
+// });
 
-Object.values(obj).forEach((value) => {
-	console.log(value);
-});
+// Object.entries(obj).forEach((value) => {
+//   console.log(value);
+// });
 
-Object.entries(obj).forEach((value) => {
-	console.log(value);
-});
+// Object.entries(obj).map((value) => {
+//   return value[1] + value[0].replace("username", "");
+// });
 
-Object.entries(obj).map((value) => {
-	return value[1] + value[0].replace("username", "");
+//sort an object
+const sortedObj = Object.values(obj)
+  .sort()
+//.reduce((result, item) => {
+//     result[key] = item;
+//     result[getKeyByValue(item, obj)] = item;
+//      return result;
+//   }, {});
+  .forEach((value) => {
+   obj[getKeyByValue(obj, value)] = value;
+  });
+//   .reduce(
+//     (result, value) => ({
+//       ...result,
+//       [value]: value,
+//     }),
+//     {}
+//   )
+//   .reduce((result, key) => ((obj[key] = result[key]), result), {});
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find((key) => object[key] === value);
+}
+
+console.log(getKeyByValue(obj, "santa"));
+
+console.log(sortedObj);
+
+let obj2 = {
+  red: 3,
+  blue: 2,
+  ayellow: 21
+};
+//sort based on keys
+const stack = Object.keys(obj2)
+  .sort()
+  .reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: obj2[key],
+    }),
+    {}
+  );
+console.log(stack);
+
+let object = [
+  { age: 4, name: "xbar" },
+  { age: 6, name: "me" },
+  { age: 1, name: "I" },
+];
+
+let sortedObject = object.sort((a, b) => {
+  if (a.name < b.name) return -1; // sorted by name
+  if (a.name > b.name) return 1;
+  return 0;
 });
+console.log(sortedObject);
 
 // Solve the below problems:
 
@@ -88,48 +144,52 @@ turtle = turtle.trim().padEnd(9, "=");
 //   the: "reindeer",
 // };
 // // to this:
-obj = "my name is Rudolf the reindeer";
+// obj = "my name is Rudolf the reindeer";
+
+// Object.entries(obj)
+//   .map((value) => value[0] + " " + value[1])
+//   .join(" ");
 
 Object.entries(obj)
-	.map((value) => value[0] + " " + value[1])
-	.join(" ");
-
-Object.entries(obj)
-	.map((value) => value.join(" "))
-	.join(" ");
+  .map((value) => value.join(" "))
+  .join(" ");
 
 //Debugging
 
 const flattened = [
-	[0, 1],
-	[2, 3],
-	[4, 5],
+  [0, 1],
+  [2, 3],
+  [4, 5],
 ].reduce((accumulator, array) => {
-	console.log("array", array);
-	console.log("acc",  accumulator);
-	//debugger
-	return accumulator.concat(array);
+  console.log("array", array);
+  console.log("acc", accumulator);
+  //debugger
+  return accumulator.concat(array);
 }, []);
 
-const flattenedo = [[0, 1],[2, 3],[4, 5]].reduce((accumulator, array) => accumulator.concat(array), []);
+const flattenedo = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce((accumulator, array) => accumulator.concat(array), []);
 
 //Call Stack Overflow
-function foo()
-{
-	foo();
-}
+// function foo() {
+//   foo();
+// }
 
-foo();
+//foo();
 
 //Asynchronous JS
 console.log(1);
-setTimeout(() => { console.log(2);}, 2000);
+setTimeout(() => {
+  console.log(2);
+}, 2000);
 console.log(3);
 
 //setTimeout(), 2000
-//Web API 
+//Web API
 //callback()
-//Callback queue 
+//Callback queue
 
 //Event loop
-

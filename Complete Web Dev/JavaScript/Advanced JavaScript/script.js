@@ -63,11 +63,17 @@ function calculator() {
   }
 }
 
+document
+  .querySelector("button")
+  .addEventListener("click", () => console.log("i only run once"), {
+    once: true,
+  });
+
 //Destructuring
-const obj = {
-  players: "bobby", experience: 100,
-  wizardLevel: false
-};
+// const obj = {
+//   players: "bobby", experience: 100,
+//   wizardLevel: false
+// };
 
 // const players = obj.players;
 // const experience = obj.experience;
@@ -99,7 +105,7 @@ const objects = {
 //  const greeting = `Hello ${name}!`;
 //  alert(greeting);
 
-//defult arguments
+//default arguments
 const greeting = (name = "", age = 90, pet = "cat") => {
   `Hello ${name}! nice ${pet} for a ${age} year old😏`;
 };
@@ -110,7 +116,7 @@ const add = (a, b) => a + b;
 //ADvanced Functions
 
 const first = () => {
-  const greet = "Hi";
+  //const greet = "Hi";
   const second = () => {
     // alert("sds");
     // alert(greet);
@@ -125,10 +131,11 @@ const multiply = (a, b) => a * b;
 const curriedMultiply = (a) => (b) => a * b;
 curriedMultiply(3)(4);
 const multiplyBy5 = curriedMultiply(5);
+console.log(multiplyBy5);
 
 //Compose
 const compose = (f, g) => (a) => f(g(a));
-const sum = (num) => sum + 1;
+const sum = () => sum + 1;
 compose(sum, sum)(5);
 
 //Advanced arrays
@@ -207,7 +214,7 @@ const mapArrays = array.map((user) => `${user.username}?`);
 console.log("map function", mapArray);
 
 //Filter the array to only include users who are on team: red
-const filterArrays = arrayEx.filter(user => user.team == "red");
+const filterArrays = arrayEx.filter((user) => user.team == "red");
 console.log(filterArray);
 
 //Find out the total score of all users using reduce
